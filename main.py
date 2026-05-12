@@ -1,5 +1,6 @@
 import asyncio
 import logging
+from keep_alive import keep_alive
 from aiogram import Bot, Dispatcher, F
 from aiogram.types import Message, CallbackQuery, BotCommand
 from aiogram.filters import CommandStart, Command
