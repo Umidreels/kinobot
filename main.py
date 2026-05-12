@@ -221,11 +221,11 @@ async def main():
     finally:
         await bot.session.close()
 
-if name == "main":
-try:
-keep_alive()
-asyncio.run(main())
-except KeyboardInterrupt:
-logger.info("Bot foydalanuvchi tomonidan to'xtatildi")
-except Exception as e:
-logger.error(f"Botda xatolik: {e}", exc_info=True)
+if __name__ == "__main__":
+    try:
+        keep_alive()
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        logger.info("Bot foydalanuvchi tomonidan to'xtatildi")
+    except Exception as e:
+        logger.error(f"Botda xatolik: {e}", exc_info=True)
